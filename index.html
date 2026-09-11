@@ -1,133 +1,186 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LongPC — 대전 컴퓨터 출장수리 · 중고PC 매입판매</title>
-  <meta name="description" content="대전 컴퓨터 출장수리, 중고PC 매입·판매, 데이터 복구, 속도 개선 등 모든 문제를 빠르고 정확하게 해결합니다.">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="LONGPC - 대전·충청 학교·관공서·기업 전산 유지보수 전문 파트너">
+<title>LONGPC - 학교·관공서·기업 전산 유지보수 전문 파트너</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif;scroll-behavior:smooth}
+:root{--bg:#11141a;--panel:#1a202c;--panel2:#161a23;--border:#2d3748;--gold:#ffb800;--gold2:#ff9900;--text:#fff;--muted:#cbd5e1}
+body{color:var(--text);line-height:1.6;background:var(--bg);padding-top:82px}
+a{color:inherit}
+header{position:fixed;top:0;left:0;width:100%;background:rgba(22,26,35,.97);border-bottom:2px solid #222a38;z-index:1000;backdrop-filter:blur(8px)}
+.nav-container{display:flex;justify-content:space-between;align-items:center;max-width:1180px;margin:0 auto;padding:15px 20px;gap:20px}
+.logo{font-size:25px;font-weight:900;letter-spacing:1px;cursor:pointer;white-space:nowrap}.logo span{color:var(--gold)}
+.nav-menu{display:flex;list-style:none;gap:24px;align-items:center}.nav-menu a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:700;transition:.2s}.nav-menu a:hover{color:var(--gold)}
+.btn-top-call{border:2px solid var(--gold);color:var(--gold);background:transparent;padding:7px 14px;border-radius:6px;font-weight:800;font-size:14px;text-decoration:none;white-space:nowrap;transition:.25s}.btn-top-call:hover{background:var(--gold);color:var(--bg)}
+.container{max-width:1180px;margin:0 auto;padding:28px 20px 50px}
+.hero-box{text-align:center;margin:10px 0 48px;padding:55px 24px;background:linear-gradient(145deg,#1a202c,#151a23);border-radius:14px;border:1px solid var(--border);box-shadow:0 16px 45px rgba(0,0,0,.18)}
+.hero-box h1{font-size:36px;line-height:1.35;margin-bottom:16px;font-weight:900;letter-spacing:-1px}.hero-box h1 span{color:var(--gold)}.hero-box p{color:var(--muted);font-size:17px;font-weight:600}.hero-actions{display:flex;justify-content:center;gap:12px;margin-top:26px;flex-wrap:wrap}.hero-btn{padding:12px 20px;border-radius:7px;text-decoration:none;font-weight:800}.hero-btn.primary{background:linear-gradient(90deg,var(--gold),var(--gold2));color:#171717}.hero-btn.secondary{border:1px solid #465064;color:#fff;background:#202735}
+section{padding:36px 0 18px;scroll-margin-top:95px}.section-title{font-size:25px;margin-bottom:24px;border-left:5px solid var(--gold);padding-left:12px;font-weight:900}.section-desc{color:#94a3b8;margin:-12px 0 24px 17px;font-size:14px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.service-card{background:var(--panel);padding:26px;border-radius:10px;border:1px solid var(--border);transition:.25s}.service-card:hover{transform:translateY(-3px);border-color:#5b6576}.service-card h3{font-size:18px;color:var(--gold);margin-bottom:12px}.service-card p{color:var(--muted);font-size:14px}
+.features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.feature-item{background:var(--panel);padding:21px;border-radius:9px;border:1px solid var(--border);border-top:4px solid var(--gold)}.feature-item h4{font-size:16px;margin-bottom:8px}.feature-item p{color:var(--muted);font-size:13px}
+.price-wrapper{overflow-x:auto;border-radius:9px;border:1px solid var(--border);background:var(--panel)}.price-table{width:100%;border-collapse:collapse;text-align:center;min-width:860px}.price-table th,.price-table td{padding:16px 12px;border:1px solid var(--border);font-size:14px}.price-table th{background:#2d3748;font-size:15px}.price-table td.feature-title{background:var(--panel2);font-weight:800;text-align:left;width:22%;color:#e2e8f0}.highlight{background:rgba(255,184,0,.09);color:#ffe099;font-weight:800}.price-table th.highlight{color:var(--gold);box-shadow:inset 0 3px 0 var(--gold)}.gold-text{color:var(--gold)!important;font-weight:900}.price-note{color:#94a3b8;font-size:13px;margin-top:12px}
+.contact-box{background:var(--panel);padding:36px;border-radius:10px;border:1px solid var(--border)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:20px}.form-group{display:flex;flex-direction:column}.form-group.full{grid-column:1/-1}.form-group label{font-weight:800;margin-bottom:7px;font-size:14px}.form-group label span{color:#ef4444;margin-right:3px}.form-group input,.form-group textarea,.form-group select{padding:13px;background:#fff;border:2px solid #cbd5e1;border-radius:6px;font-size:15px;color:#111;font-weight:500;transition:.2s}.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--gold);outline:none;box-shadow:0 0 0 3px rgba(255,184,0,.13)}.form-group textarea{min-height:130px;resize:vertical}.privacy-title{font-weight:800;font-size:14px;margin-top:7px;margin-bottom:7px}.privacy-text{background:var(--panel2);padding:13px;border-radius:6px;font-size:12px;color:var(--muted);margin-bottom:13px;border:1px solid var(--border)}.agree-row{display:flex;align-items:center;gap:8px;color:#e2e8f0;font-size:14px;margin-bottom:22px}.agree-row input{width:18px;height:18px;accent-color:var(--gold)}.btn-submit{width:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));color:#11141a;padding:17px;border:0;border-radius:6px;font-size:20px;font-weight:900;cursor:pointer;box-shadow:0 4px 15px rgba(255,184,0,.25);transition:.25s}.btn-submit:hover{transform:translateY(-1px);filter:brightness(1.04)}
+.contact-direct{margin-top:18px;text-align:center;color:#cbd5e1;font-size:14px}.contact-direct a{color:var(--gold);font-weight:800;text-decoration:none}
+footer{margin-top:55px;padding:30px 10px 10px;border-top:1px solid var(--border);text-align:center;font-size:13px;color:#94a3b8;line-height:1.9}footer strong{color:#fff;font-size:16px}
+@media(max-width:980px){body{padding-top:127px}.nav-container{flex-wrap:wrap;justify-content:center;padding:10px 15px}.logo{margin-right:auto}.btn-top-call{margin-left:auto}.nav-menu{order:3;width:100%;justify-content:center;gap:18px}.features-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){body{padding-top:138px}.container{padding:18px 12px 40px}.nav-menu{gap:10px;flex-wrap:wrap}.nav-menu a{font-size:12px}.btn-top-call{font-size:12px;padding:6px 10px}.hero-box{padding:38px 16px;margin-bottom:28px}.hero-box h1{font-size:25px}.hero-box p{font-size:14px}.services-grid,.features-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.contact-box{padding:20px 16px}.section-title{font-size:21px}.service-card{padding:20px}}
+</style>
 </head>
-<body class="bg-neutral-50 text-neutral-900">
+<body>
+<header>
+  <div class="nav-container">
+    <div class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">LONG<span>PC</span></div>
+    <ul class="nav-menu">
+      <li><a href="#section-services">서비스 안내</a></li>
+      <li><a href="#section-features">우리의 강점</a></li>
+      <li><a href="#section-pricing">유지보수 요금표</a></li>
+      <li><a href="#section-contact">견적 문의</a></li>
+    </ul>
+    <a href="tel:010-6706-4733" class="btn-top-call">상담 010-6706-4733</a>
+  </div>
+</header>
 
-  <!-- Header -->
-  <header class="sticky top-0 z-30 backdrop-blur bg-white/80 border-b border-neutral-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
-      <a href="#home" class="flex items-center gap-3">
-        <img src="logo.png" alt="LongPC" class="h-6 w-auto object-contain">
-        <span class="sr-only">LongPC</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#services" class="hover:text-black">서비스</a>
-        <a href="#pricing" class="hover:text-black">요금</a>
-        <a href="#contact" class="hover:text-black">문의</a>
-      </nav>
-      <a href="tel:01067064733" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold bg-black text-white rounded-2xl hover:bg-black/90">
-        010-6706-4733
-      </a>
+<main class="container">
+  <div class="hero-box">
+    <h1>선생님은 교육에만 전념하세요.<br>학교 전산 관리는 <span>LONGPC</span>가 확실히 책임집니다.</h1>
+    <p>대전·충청 지역 초·중·고등학교 및 공공기관 전문 원스톱 실시간 케어 시스템</p>
+    <div class="hero-actions">
+      <a class="hero-btn primary" href="#section-contact">무료 견적 문의</a>
+      <a class="hero-btn secondary" href="tel:010-6706-4733">전화 상담하기</a>
     </div>
-  </header>
+  </div>
 
-  <!-- Hero -->
-  <section id="home" class="text-center py-16 sm:py-24">
-    <span class="inline-block rounded-full bg-black text-white px-3 py-1 text-xs font-medium">당일 출장 · 합리적 비용 · 친절 상담</span>
-    <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold leading-tight">
-      대전 <span class="text-black">컴퓨터 출장수리</span> · 중고PC <span class="text-black">매입·판매</span>
-    </h1>
-    <p class="mt-4 text-neutral-600 text-lg max-w-2xl mx-auto">
-      부품교체·윈도우 재설치·데이터복구·속도개선 등 모든 문제를 빠르고 정확하게 해결합니다.
-    </p>
-    <div class="mt-8 flex flex-wrap justify-center gap-3">
-      <a href="tel:01067064733" class="inline-flex items-center justify-center px-5 py-3 text-base font-semibold rounded-2xl bg-black text-white hover:bg-black/90">
-        📞 바로 전화하기
-      </a>
-      <a href="http://pf.kakao.com/_Cpacn" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center px-5 py-3 text-base font-semibold rounded-2xl border border-neutral-300 hover:bg-neutral-100">
-        💬 카카오채널 상담
-      </a>
+  <section id="section-services">
+    <div class="section-title">서비스 안내</div>
+    <div class="services-grid">
+      <div class="service-card"><h3>💻 학교 PC & 노트북 케어</h3><p>• 교무실·행정실·컴퓨터실 단체 PC 및 노트북 정기 점검<br>• 교육용 소프트웨어 세팅 및 OS(윈도우) 최적화 포맷 작업<br>• 교육청 보안 지침에 준하는 악성코드 및 바이러스 방역</p></div>
+      <div class="service-card"><h3>🖨️ 프린터 & 복합기 관리</h3><p>• 하드웨어 정기 예방점검 및 잉크/토너 소모품 적시 공급<br>• 용지 걸림, 드라이버 연결 불량, 인쇄 장애 긴급 복구<br>• 고장 발생 시 부품 교체 및 기술공임 케어</p></div>
+      <div class="service-card"><h3>🌐 컴퓨터실 구축 & 전산망</h3><p>• 컴퓨터실 신학기 단체 마스터 복구 솔루션 구축<br>• 학내 무선 AP(Wi-Fi) 전산망 점검 및 LAN 포트 케이블 정리<br>• 노후 장비 철거 및 중고 PC 자산 폐기/매입 일괄 대행</p></div>
     </div>
   </section>
 
-  <!-- 서비스 상세 -->
-  <section id="services" class="py-16 bg-white border-t border-neutral-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-8">서비스 상세 안내</h2>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <div class="rounded-2xl border border-neutral-200 p-5">
-          <h3 class="text-lg font-semibold">컴퓨터 출장수리</h3>
-          <p class="text-sm text-neutral-600 mb-2">대전 전지역 출장 가능 / 즉시 점검 및 수리</p>
-          <ul class="list-disc ml-5 text-sm text-neutral-700 space-y-1">
-            <li>부팅 불가 / 전원 문제 / 블루스크린</li>
-            <li>SSD, 메모리, 메인보드 교체</li>
-            <li>소음, 발열, 팬 청소 및 관리</li>
-            <li>기업, 관공서 정기점검 계약 가능</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border border-neutral-200 p-5">
-          <h3 class="text-lg font-semibold">데이터 복구</h3>
-          <p class="text-sm text-neutral-600 mb-2">삭제, 포맷, 인식불가 등 데이터 손실 복구</p>
-          <ul class="list-disc ml-5 text-sm text-neutral-700 space-y-1">
-            <li>HDD/SSD/USB/외장하드 복구</li>
-            <li>논리/물리 손상 분석 및 복원</li>
-            <li>복구 불가 시 비용 청구 없음</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border border-neutral-200 p-5">
-          <h3 class="text-lg font-semibold">중고PC 매입/판매</h3>
-          <p class="text-sm text-neutral-600 mb-2">부품·노트북·법인 물량 모두 가능</p>
-          <ul class="list-disc ml-5 text-sm text-neutral-700 space-y-1">
-            <li>시세 반영 / 즉시 결제</li>
-            <li>데이터 완전 삭제</li>
-            <li>택배 및 방문 거래 가능</li>
-          </ul>
-        </div>
-      </div>
+  <section id="section-features">
+    <div class="section-title">LONGPC만의 차별화된 강점</div>
+    <div class="features-grid">
+      <div class="feature-item"><h4>🚀 대전 2시간 내 긴급 출동</h4><p>행정 공백과 수업 지연을 최소화하기 위해 장애 접수 후 신속하게 현장 대응합니다.</p></div>
+      <div class="feature-item"><h4>📄 국가 계약 행정서류 지원</h4><p>견적서, 비교견적서, 지출결의용 통장사본 등 행정실 업무에 필요한 서류를 지원합니다.</p></div>
+      <div class="feature-item"><h4>🛠️ 전담 지정 엔지니어제</h4><p>학교의 망 구조와 자산 특성을 파악한 지정 엔지니어가 연속성 있게 관리합니다.</p></div>
+      <div class="feature-item"><h4>🤝 S2B 학교장터 수의계약</h4><p>학교장터 예산 집행 절차에 맞춰 분기별·연간 예산 조율과 계약 업무를 지원합니다.</p></div>
     </div>
   </section>
 
-  <!-- 가격 안내 -->
-  <section id="pricing" class="py-16 bg-neutral-100 border-t border-neutral-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-8">가격 안내</h2>
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="rounded-2xl border border-neutral-200 p-5">
-          <h3 class="text-lg font-semibold">출장 점검비</h3>
-          <p class="text-3xl font-extrabold mt-2">₩30,000~</p>
-          <p class="text-sm text-neutral-600">수리 진행 시 점검비 차감</p>
+  <section id="section-pricing">
+    <div class="section-title">공식 전산 유지보수 요금표</div>
+    <p class="section-desc">기관의 장비 수량과 지원 범위에 따라 최종 견적은 조정될 수 있습니다.</p>
+    <div class="price-wrapper">
+      <table class="price-table">
+        <thead><tr><th>세부 정밀 항목</th><th>알뜰형 요금제</th><th class="highlight">표준형 요금제 (추천)</th><th>맞춤형 요금제</th></tr></thead>
+        <tbody>
+          <tr><td class="feature-title">정기 현장방문 주기</td><td>월 1회 정기방문 케어</td><td class="highlight">월 2회 정기방문 + 신학기 정밀점검</td><td>주 1회 이상 상시 방문 및 상주 협의</td></tr>
+          <tr><td class="feature-title">긴급출동 보장시간</td><td>장애 접수 후 24시간 이내</td><td class="highlight gold-text">장애 접수 후 2시간 이내 현장도착</td><td>장애 발생 즉시 현장 출동 협의</td></tr>
+          <tr><td class="feature-title">긴급출동 횟수 제한</td><td>회당 출장 기술비 별도 산정</td><td class="highlight">월 제한 없음 (긴급출동 기술비 포함)</td><td>월 제한 없음 (1:1 메인 전담기사 배치)</td></tr>
+          <tr><td class="feature-title">원격 제어 지원범위</td><td>일반 단순 전산오류 원격</td><td class="highlight">실시간 원격 + 화상수업 긴급백업</td><td>기관 전용 암호화 원격 관제망 구축</td></tr>
+          <tr><td class="feature-title">네트워크 및 망 제어</td><td>IP 충돌 등 기본 제어</td><td class="highlight">학내 AP망 점검 + 전산자산 대장 관리</td><td>서버 백업 시스템 연동 및 네트워크 신설공사</td></tr>
+          <tr><td class="feature-title">하드웨어 엔지니어 공임</td><td>부품비 및 조립공임 별도</td><td class="highlight">현장 정비 부품교체 공임 지원</td><td>렌탈 결합 계약 시 부품·소모품 조건 협의</td></tr>
+          <tr><td class="feature-title">행정 감사 보고서 발급</td><td>미제공</td><td class="highlight">월간 점검 마스터 리포트 발급 (증빙용)</td><td>분기별 종합 전산 자산 실태 리포트 발급</td></tr>
+          <tr><td class="feature-title">국가 계약 서류 지원</td><td>일반 세금계산서 발행</td><td class="highlight">S2B 학교장터·조달 수의계약 서류 지원</td><td>기관 예산 배정에 맞춰 지출 증빙 조율</td></tr>
+          <tr><td class="feature-title">월 고정 유지보수 비용</td><td>보유 자산별 맞춤 산정</td><td class="highlight gold-text">학교 예산에 맞춤 특화 적용</td><td>별도 견적 및 연간 예산 조율 협의</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="price-note">※ 실제 계약 조건과 부품비 포함 여부는 기관별 자산 현황 및 계약 범위에 따라 달라질 수 있습니다.</p>
+  </section>
+
+  <section id="section-contact">
+    <div class="section-title">유지보수 및 견적 문의</div>
+    <div class="contact-box">
+      <form id="quoteForm" action="https://formsubmit.co/ajax/P1JJ@NAVER.COM" method="POST">
+        <input type="hidden" name="_subject" value="[LONGPC] 학교유지보수 신규 견적제안서 요청 건">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="form-grid">
+          <div class="form-group"><label><span>*</span>학교 또는 기관명</label><input type="text" name="기관명" placeholder="예: 대전구암초등학교" required></div>
+          <div class="form-group"><label><span>*</span>담당자 성함 및 직책</label><input type="text" name="담당자명" placeholder="예: 홍길동 정보부장 교사" required></div>
+          <div class="form-group"><label><span>*</span>연락처</label><input type="tel" name="연락처" placeholder="예: 010-1234-5678" required></div>
+          <div class="form-group"><label>이메일</label><input type="email" name="email" placeholder="예: teacher@school.kr"></div>
+          <div class="form-group"><label>희망 요금제</label><select name="희망요금제"><option value="상담 후 결정">상담 후 결정</option><option>알뜰형 요금제</option><option>표준형 요금제</option><option>맞춤형 요금제</option></select></div>
+          <div class="form-group"><label>관리 PC/장비 수량</label><input type="text" name="장비수량" placeholder="예: PC 60대 / 노트북 20대"></div>
+          <div class="form-group full"><label><span>*</span>문의 내용</label><textarea name="문의내용" placeholder="현재 전산 환경, 필요한 유지보수 범위, 방문 희망 일정 등을 입력해 주세요." required></textarea></div>
         </div>
-        <div class="rounded-2xl border border-neutral-200 p-5">
-          <h3 class="text-lg font-semibold">윈도우 재설치</h3>
-          <p class="text-3xl font-extrabold mt-2">₩40,000~</p>
-          <p class="text-sm text-neutral-600">드라이버 및 최적화 포함</p>
-        </div>
-        <div class="rounded-2xl border border-neutral-200 p-5">
-          <h3 class="text-lg font-semibold">SSD 업그레이드</h3>
-          <p class="text-3xl font-extrabold mt-2">₩60,000~</p>
-          <p class="text-sm text-neutral-600">데이터 이전 포함 (부품 별도)</p>
-        </div>
-      </div>
+        <div class="privacy-title">개인정보 수집 및 이용 안내</div>
+        <div class="privacy-text">견적 상담을 위해 기관명, 담당자명, 연락처, 이메일 등 입력 정보를 수집하며 상담 및 견적 안내 목적으로만 이용합니다.</div>
+        <label class="agree-row"><input type="checkbox" name="개인정보동의" value="동의함" required> 개인정보 수집 및 이용에 동의합니다.</label>
+        <button type="submit" class="btn-submit">LONGPC 견적 문의 보내기</button>
+        <div id="quoteStatus" class="contact-direct" aria-live="polite"></div>
+        <div class="contact-direct">빠른 상담이 필요하시면 <a href="tel:010-6706-4733">010-6706-4733</a>으로 전화해 주세요.</div>
+      </form>
     </div>
   </section>
 
-  <!-- 문의 -->
-  <section id="contact" class="py-16 bg-white border-t border-neutral-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-8">문의하기</h2>
-      <p class="text-lg text-neutral-700 mb-4">전화 · 카카오채널 · 이메일</p>
-      <a href="tel:01067064733" class="block text-lg font-semibold hover:underline">📞 010-6706-4733</a>
-      <a href="http://pf.kakao.com/_Cpacn" target="_blank" rel="noreferrer" class="block hover:underline">💬 카카오채널 상담</a>
-      <a href="mailto:p1jj@naver.com" class="block hover:underline">✉️ p1jj@naver.com</a>
-    </div>
-  </section>
-
-  <!-- 고정 카카오 버튼 -->
-  <a href="http://pf.kakao.com/_Cpacn" target="_blank" rel="noreferrer"
-     class="fixed bottom-5 right-5 h-14 w-14 sm:h-16 sm:w-16 rounded-full bg-[#FEE500] text-black shadow-xl border border-neutral-300 grid place-items-center">
-     💬
-  </a>
-
-  <!-- Footer -->
-  <footer class="py-10 border-t border-neutral-200 bg-white text-center text-sm text-neutral-600">
-    LongPC © 2025 · 대전 컴퓨터 출장수리 · 중고PC 매입/판매
+  <footer>
+    <strong>LONGPC</strong><br>
+    학교 · 관공서 · 기업 전산 유지보수 전문 파트너<br>
+    상담전화 010-6706-4733 · 이메일 P1JJ@NAVER.COM<br>
+    <span>© LONGPC. All rights reserved.</span>
   </footer>
+</main>
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("quoteForm");
+  const status = document.getElementById("quoteStatus");
+  const button = form.querySelector(".btn-submit");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const originalText = button.textContent;
+    button.disabled = true;
+    button.textContent = "접수 중입니다...";
+    status.textContent = "";
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "Accept": "application/json" }
+      });
+
+      let result = {};
+      try { result = await response.json(); } catch (_) {}
+
+      if (response.ok && result.success !== false) {
+        status.innerHTML =
+          '<strong style="color:#ffb800;font-size:18px;">✓ 접수완료</strong><br>' +
+          '<span style="color:#cbd5e1;">견적 문의가 정상적으로 접수되었습니다.<br>확인 후 빠르게 연락드리겠습니다.</span>';
+        form.reset();
+        button.textContent = "접수완료";
+      } else {
+        throw new Error(result.message || "전송에 실패했습니다.");
+      }
+    } catch (error) {
+      status.innerHTML =
+        '<strong style="color:#ef4444;">접수에 실패했습니다.</strong><br>' +
+        '<span style="color:#cbd5e1;">잠시 후 다시 시도해 주세요.</span>';
+      button.disabled = false;
+      button.textContent = originalText;
+      console.error(error);
+    }
+  });
+});
+</script>
 
 </body>
 </html>
